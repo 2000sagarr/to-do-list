@@ -1,0 +1,9 @@
+.title{
+    width: 100%;
+    text-align: center;
+    background-color: white;
+}
+
+.title h2{
+    padding: 7px;
+}
