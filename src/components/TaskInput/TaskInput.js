@@ -1,15 +1,16 @@
-import React, { Fragment } from "react";
+import React from "react";
 import styles from "./TaskInput.module.css";
+import Button from '../buttons/Button';
 
-const TastInput = () => {
+const TaskInput = () => {
   return (
-    <Fragment>
+    <div className={styles.input}>
       <form>
-        <input />
-        <button></button>
+        <input type="text"/>
+        <Button type="submit" className={styles.addButton}>Add</Button>
       </form>
-    </Fragment>
+    </div>
   );
 };
 
-export default TastInput;
+export default TaskInput;
