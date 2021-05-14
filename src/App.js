@@ -16,7 +16,7 @@ function App() {
     <div className="App">
       <Title>To do list</Title>
       <TaskInput onAddTask ={addTaskHandler}/>
-      <TaskList />
+      <TaskList taskList={taskList}/>
     </div>
   );
 }

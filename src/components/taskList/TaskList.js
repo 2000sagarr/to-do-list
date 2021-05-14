@@ -2,12 +2,15 @@ import React  from 'react';
 import styles from './TaskList.module.css';
 import TaskDetails from './TaskDetails';
 
-const TaskList = () =>{
+const TaskList = (props) =>{
 
    
     return(
         <div className={styles.taskList}>
-            <TaskDetails/>
+            
+            {props.taskList.map((Task)=>{
+                return <TaskDetails task= {Task.task} date={Task.date} time={Task.time}/>
+            })}
         </div>
     )
 }

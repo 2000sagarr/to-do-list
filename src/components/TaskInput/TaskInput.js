@@ -3,7 +3,7 @@ import styles from "./TaskInput.module.css";
 import Button from "../buttons/Button";
 import Input from "../UI/Input";
 
-const TaskInput = () => {
+const TaskInput = (props) => {
   const [task, setTask] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
@@ -28,7 +28,7 @@ const TaskInput = () => {
 
   const formSubmitHandler = (event) => {
     event.preventDefault();
-    console.log(`Task : ${task} Date : ${date} Time : ${time}`);
+    props.onAddTask(task, date, time);
     setTask("");
     setDate("");
     setTime("");
