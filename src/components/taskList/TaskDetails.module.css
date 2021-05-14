@@ -1,0 +1,35 @@
+.taskDetails{
+    background-color: white;
+    text-align: center;
+    width: 100%;
+}
+
+.task{
+    width: 45%;
+}
+
+.date{
+    width: 15%;
+}
+
+.time{
+    width: 10%;
+}
+
+.completeButton{
+    width: 5%;
+}
+
+.completeButton Button{
+    background-color: skyblue;
+    color : white;
+}
+
+.deleteButton{
+    width: 5%;
+}
+
+.deleteButton Button{
+    background-color: red;
+    color: white;
+}
