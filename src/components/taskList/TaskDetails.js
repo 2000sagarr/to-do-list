@@ -3,27 +3,28 @@ import styles from './TaskDetails.module.css';
 import Button from '../buttons/Button';
 
 const TaskDetails = props =>{
+    const taskDeleteHandler = () =>{
+        props.onDelete(props.id)
+    }
     return(
-        <table className={styles.taskDetails}>
-            <tr>
-                <td className={styles.task}>
+            <ul className={styles.taskDetails}>
+                <li className={styles.task}>
                     <p>{props.task}</p>
-                </td>
-                <td className={styles.date}>
+                </li>
+                <li className={styles.date}>
                     <p>{props.date}</p>
-                </td>
-                <td className={styles.time}>
+                </li>
+                <li className={styles.time}>
                     <p>{props.time}</p>
-                </td>
-                <td className={styles.completeButton}>
+                </li>
+                <li className={styles.completeButton}>
                     <Button>Complete</Button>
-                </td>
-                <td className={styles.deleteButton}>
-                    <Button>Delete</Button>
-                </td>       
-            </tr>
-        </table>
-    )
+                </li>
+                <li className={styles.deleteButton}>
+                    <Button onClick={taskDeleteHandler}>Delete</Button>
+                </li>       
+            </ul>
+        )
 }
 
 export default TaskDetails;

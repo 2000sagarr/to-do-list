@@ -1,35 +1,40 @@
-.taskDetails{
-    background-color: white;
-    text-align: center;
-    width: 100%;
+.taskDetails {
+  background-color: white;
+  text-align: center;
+  width: 100%;
 }
 
-.task{
-    width: 45%;
+.taskDetails li {
+  display: inline-block;
 }
 
-.date{
-    width: 15%;
+.task {
+  text-align: left;
+  width: 50%;
 }
 
-.time{
-    width: 10%;
+.date {
+  width: 15%;
 }
 
-.completeButton{
-    width: 5%;
+.time {
+  width: 15%;
 }
 
-.completeButton Button{
-    background-color: skyblue;
-    color : white;
+.completeButton {
+  width: 10%;
 }
 
-.deleteButton{
-    width: 5%;
+.completeButton Button {
+  background-color: skyblue;
+  color: white;
 }
 
-.deleteButton Button{
-    background-color: red;
-    color: white;
+.deleteButton {
+  width: 10%;
+}
+
+.deleteButton Button {
+  background-color: red;
+  color: white;
 }

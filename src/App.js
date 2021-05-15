@@ -9,14 +9,24 @@ function App() {
 
   const addTaskHandler = (tTask, tDate, tTime) => {
     setTaskList((prevTaskList) => {
-      return [...prevTaskList, { task: tTask, date: tDate, time: tTime }];
+      const updatedTaskList = [...prevTaskList];
+      updatedTaskList.unshift({task: tTask, date: tDate, time: tTime , key : Math.random().toString()})
+      return updatedTaskList;
     });
   };
+
+  const onDeleteTaskHandler = (key) =>{
+    setTaskList(prevTaskList =>{
+      const updatedTaskList = prevTaskList.filter((task) => key !== task.key);
+      return updatedTaskList;
+    })
+  }
+
   return (
     <div className="App">
       <Title>To do list</Title>
       <TaskInput onAddTask ={addTaskHandler}/>
-      <TaskList taskList={taskList}/>
+      <TaskList taskList={taskList} onDeleteHandler = {onDeleteTaskHandler}/>
     </div>
   );
 }
